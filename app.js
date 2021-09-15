@@ -3,7 +3,7 @@ var inputArea = document.querySelector("#txt-area");
 var outputArea = document.querySelector(".output");
 translateBtn.addEventListener("click",clickHandler);
 
-var url = "https://api.funtranslations.com/translate/mindion.json"
+var url = "https://api.funtranslations.com/translate/minion.json"
 
 function clickHandler() {
     var url = constructURL(inputArea.value);
