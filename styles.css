@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 :root {
   --primary-color: #f2c94c;
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: "Satisfy", cursive;
+  font-family: 'Merienda', cursive;
   margin: 0px;
   color: var(--black);
 }
@@ -49,12 +49,13 @@ button{
     border: none;
     font-size: large;
     padding: 1rem 2rem;
+    font-family: inherit;
 
 }
 
 .output {
   border: 1px solid black;
-  height: 10vh;
+  height: 20vh;
   width: 100%;
   margin-bottom: 10rem;
   padding: 1rem;
