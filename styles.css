@@ -50,6 +50,7 @@ button{
     font-size: large;
     padding: 1rem 2rem;
     font-family: inherit;
+    border-radius: 1rem;
 
 }
 
@@ -72,6 +73,8 @@ footer {
 }
 
 footer p{
+
+  font-family: sans-serif;
     max-width: var(--width-break);
     margin: auto;
 }
