@@ -1,25 +1,23 @@
-var translateBtn = document.querySelector("#btn-translate");
-var inputArea = document.querySelector("#txt-area");
-var outputArea = document.querySelector(".output");
-translateBtn.addEventListener("click",clickHandler);
+const translateBtn = document.querySelector("#btn-translate");
+const inputArea = document.querySelector("#txt-area");
+const outputArea = document.querySelector(".output");
 
-var url = "https://api.funtranslations.com/translate/minion.json"
+const url = "https://api.funtranslations.com/translate/minion.json"
 
-function clickHandler() {
-    var url = constructURL(inputArea.value);
+const clickHandler =() =>{
+    const url = constructURL(inputArea.value);
     fetch(url)
     .then(response => response.json())
     .then(data => outputArea.innerText = data.contents.translated)
-    .catch(errorHandler);
-   
-    
+    .catch(errorHandler);  
 }
 
-function constructURL(inputText) {
-    var encodedURI = encodeURI(inputText);
+const constructURL = inputText => {
+    const encodedURI = encodeURI(inputText);
     return `${url}?text=${encodedURI}`
 }
 
-function errorHandler(error) {
-    outputArea.innerText = "Oops we hit the bananaa error\n " + error;
-}
+const errorHandler = error => outputArea.innerText = "Oops we hit the bananaa error\n " + error;
+
+
+translateBtn.addEventListener("click", clickHandler);
